@@ -1,0 +1,346 @@
+/*Importación de fuente para la cabecera*/
+@font-face{
+	font-family: SpecialElite;
+	src: url("../fonts/SpecialElite-Regular.ttf") format('truetype');
+}
+/*Importación texto para el slider*/
+@font-face{
+	font-family: HelveticaNeue;
+	src: url("../fonts/HelveticaNeue.otf") format('opentype');
+}
+
+
+/*CABECERA*/
+/* Color fondo y radio del borde de la cabecera*/
+#cabecera>header{
+	background-color: #4697F3;
+	border-radius: 10px;
+}
+/*Textos de la cabecera*/
+#cabecera>header>#texto1{
+	position: absolute;
+	top: 7%;
+	left: 20%;
+	font-size: 25px;
+	font-family: SpecialElite;
+}
+#cabecera>header>#texto2{
+	position: absolute;
+	top: 7%;
+	right: 20%;
+	font-size: 25px;
+	font-family: SpecialElite;
+}
+/*Imagen cabecera Monte Fuji*/
+#cabecera>header>img#fuji{
+	width: 20%;
+	display: block;
+	margin: 0 auto;
+	z-index: 1;
+}
+/*Imagen cabecera cámara*/
+#cabecera>header>img#camara{
+	width: 5%;
+	position: absolute;
+	top: 8%;
+	right: 40%;
+	z-index: 4;
+}
+/*Monte Fuji en pantalla de la cámara*/
+#cabecera>header>img#fuji2{
+	width: 3.5%;
+	position: absolute;
+	top: 12.8%;
+	right: 41.3%;
+	z-index: 2;
+}
+/*Sol en la cámara*/
+#cabecera>header>img#sol{
+	width: 3%;
+	position: absolute;
+	top: 9.5%;
+	right: 42.3%;
+	z-index: 1;
+}
+/*Sol*/
+#cabecera>header>img#sol2{
+	width: 5%;
+	position: absolute;
+	top: 4%;
+	left: 44%;
+	z-index: 2;
+}
+/*Nubes*/
+#cabecera>header>img#nubes1{
+	width: 7%;
+	position: absolute;
+	top: 6%;
+	left: 44%;
+	z-index: 2;
+}
+/*Nubes en la cámara*/
+#cabecera>header>img#nubes2{
+	width: 3%;
+	position: absolute;
+	top: 11%;
+	right: 42%;
+	z-index: 1;
+}
+/*Flash de la cámara*/
+#cabecera>header>img#flash{
+	opacity: 0;
+	width: 5%;
+	position: absolute;
+	top: 3.5%;
+	right: 41%;
+	z-index: 3;
+}
+/*Animación efecto flash*/
+@keyframes flash{
+	0% {
+		opacity: 0;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+/*Activación del flash de la cámara*/
+#fuji:active + #flash{/*El selector + hace posible que cuando clique en el monte fuji la animacion recaiga en el siguiente elemento (#flash)*/
+	animation: flash 0.02s ease;
+}
+
+
+
+/*MENÚ DESPLEGABLE*/
+/*Radio de los bordes de los ítems seleccionados*/
+#liArriba{
+	border-radius: 0 10px 0 0;
+}
+.liAbajo{
+	border-radius: 0 0 0 10px ;
+}
+.liArribaDer{
+	border-radius: 0 10px 0 0;
+}
+#liDer{
+	border-radius: 0 10px 10px 0;
+}
+#liAbajo2{
+	border-radius: 0 0 10px 10px;
+}
+/*Posición del nav y centrado del texto*/
+nav{
+	position: relative;
+	text-align: center;
+}
+/*Ítems del menú principal*/
+nav li{
+	list-style-type: none;
+	background-color: #4697F3;
+	width: 5%;
+	padding: 10px;
+}
+/*Enlaces de los ítems del menú principal*/
+nav a{
+	text-decoration: none;
+	color: inherit;
+}
+/*Esconder menú dentro de su ítem*/
+nav li ul{
+	display: none;
+}
+/*Esconder submenú del submenú dentro del ítem del menú principal*/
+nav li>ul li>ul{
+	display: none;
+}
+/*Mostrar el primer submenú*/
+nav li:hover>ul{
+	display: block;
+	color: inherit;
+	position: absolute;
+	left: 6.2%;
+	top: 29%;
+}
+/*Atributos de los ítems del submenú*/
+nav ul li ul li{
+	background-color: #4697F3;
+	color: black;
+	width: auto;
+}
+/*Color de fuente y fondo del ítem al pasar ratón por encima*/
+nav li:hover{
+	background-color: #4373AA;
+	color: white;
+}
+/*Atributos del submenú del submenú del ítem*/
+nav li:hover>ul li>ul{
+	position: absolute;
+	left: 73%;
+	top: 80%;
+}
+
+
+
+/*DIV PRINCIPAL DE INDEX*/
+/*Div con section*/
+div#principal{
+	position: absolute;
+	top: 21.5%;
+	left: 22%;
+	text-align: center;
+	width: 70%;
+}
+/*Imagen principal en section*/
+#imagen-section{
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	border: 1px solid black;
+	padding: 3%;
+}
+
+
+
+/*DIV PRINCIPAL DE LAS DEMÁS PÁGINAS*/
+/*Div con section*/
+div.principal2{
+	margin-bottom: 5%;
+	position: absolute;
+	top: 25%;
+	left: 22%;
+	text-align: center;
+	width: 50%;
+	height: 64%;
+	background-color: white;
+	overflow: auto;
+}
+div.principal2::-webkit-scrollbar{
+	display: none;
+}
+/*Imágenes de las cámaras*/
+.imagenes-camaras{
+	width: 40%;
+}
+#yi{
+	width: 60%;
+}
+
+
+
+/*ASIDE*/
+div#aside{
+	margin-bottom: 5%;
+	position: absolute;
+	top: 25%;
+	right: 1.5%;
+	width: 25%;
+	height: 40%;
+	background-color: white;
+	border-right: .5px solid black;
+	border-left: .5px solid black;
+	margin: auto;
+	overflow: hidden;
+}
+/*Lista en el aside, donde guardo los logos de las redes y el nombre y con la animación slider se convierte en uno*/
+div#aside ul{
+	display: flex;
+	padding: 0;
+	width: 600%;
+	animation: slider 30s infinite alternate linear;
+}
+div#aside li{
+	width: 100%;
+	list-style-type: none;
+}
+/*Atributos de las imágenes*/
+div#aside img#twitter{
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5%;
+}
+div#aside img#facebook{
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+}
+div#aside img#form{
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+}
+div#aside img#publi1{
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 25%;
+	margin-bottom: 5%;
+}
+div#aside img#publi2{
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 25%;
+}
+div#aside img#publi3{
+	width: 60%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 30%;
+}
+/*Al pasar ratón por encima de los elementos img activa la animación de giro*/
+div#aside img:hover{
+	animation: giro 2s infinite linear;
+}
+/*Definiendo atributos del texto*/
+div#aside p{
+	font-family: HelveticaNeue;
+	text-align: center;
+	color: #00ACED;
+}
+/*Definiendo las animaciones slider y giro*/
+@keyframes slider{
+	0% {margin-left: 0;}
+	9% {margin-left: 0;}
+	18% {margin-left: -100%;}
+	27% {margin-left: -100%;}
+	36% {margin-left: -200%;}
+	45% {margin-left: -200%;}
+	54% {margin-left: -300%;}
+	63% {margin-left: -300%;}
+	74% {margin-left: -400%;}
+	83% {margin-left: -400%;}
+	92.5% {margin-left: -500%;}
+	100% {margin-left: -500%;}
+}
+@keyframes giro{
+	0% {transform: rotate(0deg) scale(1,1);}
+	25% {transform: rotate(90deg) scale(1.05,1.05);}
+	50% {transform: rotate(180deg) scale(1.1,1.1);}
+	75% {transform: rotate(270deg) scale(1.05,1.05);}
+	100% {transform: rotate(360deg) scale(1,1);}
+}
+
+
+/*FOOTER*/
+/*Pié de página/footer*/
+#pie>footer{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 5%;
+	background-color: black;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+}
+/*Texto del footer*/
+#pie>footer>p{
+	position: relative;
+	bottom: 50%;
+}
+/*Color del texto al pasar por encima el ratón*/
+#pie>footer>p:hover{
+	color: #4697F3;
+}

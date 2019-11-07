@@ -8,7 +8,7 @@
 		<!-- Icono de la pestaña -->
 		<link rel="icon" type="image/png" href="../images/icono.png">
 		<!-- Título de la pestaña -->
-		<title>Cámaras Deportivas</title>
+		<title>Slider de fotos</title>
 	</head>
 	<body id="body">
 		<!-- Div maesro/principal -->
@@ -58,24 +58,85 @@
 				</nav>
 			</div>
 			<!-- Div princpal/section/contenido/etc... -->
-			<div class="principal2">
-				<!-- Elemento section y su contenido -->
-				<section>
-					<h1>Cámaras deportivas</h1>
-					<h2>Xiaomi Mi Action</h2>
-					<p>El modelo más reciente cuesta alrededor de 135€, con un peso de 100g.<br>
-					Tiene Wi-Fi, Bluetooth, una pantalla táctil de 2,4 pulgadas.<br>
-					Puede llevar tarjeta microSD de hasta 64GB, resolución máxima de foto de 3840x2160 y video de 3840x2160 a 30fps.<br></p>
-					<a href="https://www.mi.com/es/mi-action-camera-4k/" target="_blank"><img  class="imagenes-camaras" src="../images/xiaomi-mi-action.png"></a>
-					<h2>Yi 4K+</h2>
-					<p>Cuesta alrededor de los 230€, tiene Wi-Fi y bluetooth, pantalla táctil de 2,2 pulgadas, 2 procesadores, sensor de imagen Sony, graba hasta a 3840x2160 a 60, 50, 48, 30, 25 y 24 fps.<br>
-					Estabilizador, foto con máxima resolución a 4000x3000, temporizador, ráfaga, ajuste de balance de blancos, etc.</p>
-					<a href="http://www.yitechnology.com.es/yi-4k-plus-action-camera" target="_blank"><img  id="yi" src="../images/yi-action.png"></a>
-					<h2>GoPro Hero8</h2>
-					<p>Esta es la más cara de todas las cámaras deportivas, ronda los 400€-430€, pero lo es gracias a todas las funcionalidades que tiene.<br>
-					Un gran estabilizador, graba a 4K a 60fps o 1080 a 240fps, camara lenta x8, transmitir en directo, sumergible hasta 10m, superfoto y HDR, soporte integrado, fotos en RAW (gran calidad y para edición), bluetooth y Wi-Fi, gran angular, video secuencial.</p>
-					<a href="https://gopro.com/es/es/shop/cameras/hero8-black/CHDHX-801-master.html" target="_blank"><img class="imagenes-camaras" src="../images/gopro.png"></a>
-				</section>
+			<div class="principalSlider">
+				<p id="tituloSlider">Slider</p>
+				<!-- Slider -->
+				<ul class="slides">
+				    <input type="radio" name="radio-btn" id="img-1" checked/>
+				    <li class="slide-container">
+						<div class="slide">
+							<img src="../images/ave-atardecer.jpg" />
+				        </div>
+						<div class="nav">
+							<label for="img-6" class="prev">&#x2039;</label>
+							<label for="img-2" class="next">&#x203a;</label>
+						</div>
+				    </li>
+
+				    <input type="radio" name="radio-btn" id="img-2" />
+				    <li class="slide-container">
+				        <div class="slide">
+				          <img src="../images/mansion.jpg" />
+				        </div>
+						<div class="nav">
+							<label for="img-1" class="prev">&#x2039;</label>
+							<label for="img-3" class="next">&#x203a;</label>
+						</div>
+				    </li>
+
+				    <input type="radio" name="radio-btn" id="img-3" />
+				    <li class="slide-container">
+				        <div class="slide">
+				          <img src="../images/ciudad.jpg" />
+				        </div>
+						<div class="nav">
+							<label for="img-2" class="prev">&#x2039;</label>
+							<label for="img-4" class="next">&#x203a;</label>
+						</div>
+				    </li>
+
+				    <input type="radio" name="radio-btn" id="img-4" />
+				    <li class="slide-container">
+				        <div class="slide">
+				          <img src="../images/via.jpg" />
+				        </div>
+						<div class="nav">
+							<label for="img-3" class="prev">&#x2039;</label>
+							<label for="img-5" class="next">&#x203a;</label>
+						</div>
+				    </li>
+
+				    <input type="radio" name="radio-btn" id="img-5" />
+				    <li class="slide-container">
+				        <div class="slide">
+				          <img src="../images/montana.jpg" />
+				        </div>
+						<div class="nav">
+							<label for="img-4" class="prev">&#x2039;</label>
+							<label for="img-6" class="next">&#x203a;</label>
+						</div>
+				    </li>
+
+				    <input type="radio" name="radio-btn" id="img-6" />
+				    <li class="slide-container">
+				        <div class="slide">
+				          <img src="../images/nieve.jpg" />
+				        </div>
+						<div class="nav">
+							<label for="img-5" class="prev">&#x2039;</label>
+							<label for="img-1" class="next">&#x203a;</label>
+						</div>
+				    </li>
+
+				    <li class="nav-dots">
+				      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+				      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+				      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+				      <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+				      <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+				      <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+				    </li>
+				</ul>
 			</div>
 			<!-- Div del aside -->
 			<div id="aside">

@@ -132,6 +132,9 @@
 nav{
 	position: relative;
 	text-align: center;
+	/*Para que el menú se vea mejor eliminar los atributos top y left*/
+	top: -16px;
+	left: -15px;
 }
 /*Ítems del menú principal*/
 nav li{
@@ -210,7 +213,6 @@ div.principal2{
 	text-align: center;
 	width: 50%;
 	height: 64%;
-	background-color: white;
 	overflow: auto;
 }
 div.principal2::-webkit-scrollbar{
@@ -223,6 +225,135 @@ div.principal2::-webkit-scrollbar{
 #yi{
 	width: 60%;
 }
+/*SLIDER*/
+/*Div del slider*/
+div.principalSlider{
+	position: absolute;
+	top: 75%;
+	left: 10%;
+	margin-bottom: 5%;
+}
+div.principalSlider p{
+	text-align: center;
+	font-size: 25px;
+}
+/*Este slider lo cogí de la página codepen,
+para visitarlo el link se encuentra en mi copia del enunciado del UT2.P21
+Me pareció un slider increible y quise usarlo*/
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+/*Elemento ul*/
+.slides {
+    padding: 0;
+    width: 1200px;
+    height: 700px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*Elementos ul y todo lo que haya dentro*/
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+/*Radios*/
+.slides input { display: none; }
+/*Elemento li de la lista desordenada (slider)*/
+.slide-container { display: block; }
+
+/*Propiedades del div de las imágenes*/
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 1200px;
+    height: 700px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+/*Propiedades de las imágenes*/
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Botones siguiente y anterior imagen*/
+.nav label {
+    width: 100px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 155px;
+	opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+/*Opacidad de las flechas al pasar el ratón por encima de las imágenes*/
+.slide:hover + .nav label { opacity: 0.5; }
+/*Opacidad de las flechas al pasar el ratón por encima de estas*/
+.nav label:hover { opacity: 1; }
+/*Posición de las flechas 'siguiente'*/
+.nav .next { right: 0; }
+/*El estado de los radios*/
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+/*El estado de los radios*/
+input:checked + .slide-container .nav label { display: block; }
+/*Propiedades de la lista ul de radios de la parte de abajo*/
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+/*Propiedades de los items de la lista de radios*/
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+/*Oscurecimiento de los radios al pasar el ratón por encima*/
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+/*Color de los radios*/
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+	background: rgba(0, 0, 0, 0.8);
+}
 
 
 
@@ -234,13 +365,13 @@ div#aside{
 	right: 1.5%;
 	width: 25%;
 	height: 40%;
-	background-color: white;
 	border-right: .5px solid black;
 	border-left: .5px solid black;
 	margin: auto;
 	overflow: hidden;
 }
-/*Lista en el aside, donde guardo los logos de las redes y el nombre y con la animación slider se convierte en uno*/
+/*Lista en el aside, donde guardo los logos de las redes y el nombre,
+y con la animación slider se mueve y eso*/
 div#aside ul{
 	display: flex;
 	padding: 0;
@@ -253,18 +384,18 @@ div#aside li{
 }
 /*Atributos de las imágenes*/
 div#aside img#twitter{
-	width: 70%;
+	width: 60%;
 	display: block;
 	margin: 0 auto;
-	margin-top: 5%;
+	margin-top: 4%;
 }
 div#aside img#facebook{
-	width: 60%;
+	width: 55%;
 	display: block;
 	margin: 0 auto;
 }
 div#aside img#form{
-	width: 60%;
+	width: 55%;
 	display: block;
 	margin: 0 auto;
 }

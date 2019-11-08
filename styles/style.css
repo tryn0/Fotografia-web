@@ -452,6 +452,36 @@ div#aside p{
 }
 
 
+/*Formulario*/
+form{
+	margin-left: 30%;
+	display: inline-block;
+}
+/*Carácter (*)*/
+p.requerido{
+	display: inline;
+}
+/*Información del elemento del formulario al pasar el ratón por encima de (*)*/
+p#tooltip{
+	display: none;
+}
+/*La acción de mostrar el tooltip al hacer hover sobre (*)*/
+p.requerido:hover + p#tooltip{
+	display: inline;
+	position: absolute;
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	padding: 3px;
+	z-index: 1;
+}
+/*Botontes submit y reset*/
+.botones{
+	margin-left: 70px;
+	border-radius: 6px;
+}
+
+
 /*FOOTER*/
 /*Pié de página/footer*/
 #pie>footer{

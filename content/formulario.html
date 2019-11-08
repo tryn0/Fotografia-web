@@ -8,7 +8,7 @@
 		<!-- Icono de la pestaña -->
 		<link rel="icon" type="image/png" href="../images/icono.png">
 		<!-- Título de la pestaña -->
-		<title>Cámaras Instantáneas</title>
+		<title>Formulario</title>
 	</head>
 	<body id="body">
 		<!-- Div maesro/principal -->
@@ -58,21 +58,51 @@
 				</nav>
 			</div>
 			<!-- Div princpal/section/contenido/etc... -->
-			<div class="principal2">
-				<!-- Elemento section y su contenido -->
-				<section>
-					<h1>Cámaras instantáneas</h1>
-					<p>Se les llama cámaras instantáneas a cuyas cámaras revelan la foto al instante en el que se saca, por ejemplo, las polaroid, se pusieron muy de moda en los 80.</p>
-					<h2>Instax Mini 9 Fujifilm</h2>
-					<p>Tamaño de la foto 62mmx46mm, salida automática de la foto, alimentada con 2 pilas AA, pesa unos 307g, capacidad de 100 fotos por cada 2 pilas nuevas. Precio unos 65€.</p>
-					<a href="https://instax.com/mini9/es/" target="_blank"><img  class="imagenes-camaras" src="../images/instax.png"></a>
-					<h2>Kodak Mini Shot Instant</h2>
-					<p>Cuesta alrededor de los 110€, 10 megapíxeles, pantalla LCD de 1,7 pulgadas, autofoco, balance de blancos y correcto de gama,<br> tamaño de las fotos de 2,1x3,4 pulgadas (tamaño de tarjeta de crédito), resistente al agua, bluetooth,<br> posibilidad de app móvil para aplicar filtros y efectos a las fotos.</p>
-					<a href="https://www.kodak.com/us/es/Consumer/Products/Instant-Print-Cameras/Mini-shot/default.htm" target="_blank"><img  id="yi" src="../images/kodak.webp"></a>
-					<h2>Polaroid OneStep 2 Viewfinder</h2>
-					<p>Inspirada en la mítica versión del 77, compatible con la película Polaroid i-Type (también la usa la Polaroid 600),<br> potente flash, batería recargable, 2h para la carga total dan para hacer entre 120 y 160 fotos,<br> objetivo de alta calidad, temporizador, palanca para compensar la exposición y <br>obtener fotos un poco más claras u oscuras, cuesta unos 120€ <br>(a parte el papel, como en las anteriores cámaras de esta sección), hace las típicas fotos en papel blanco con un espacio abajo para poder escribir.</p>
-					<a href="https://www.tiendapolaroid.com/polaroid-onestep-2-viewfinder.html" target="_blank"><img class="imagenes-camaras" src="../images/polaroid.png"></a>
-				</section>
+			<div>
+				<form method="POST" action="mailto:vkae@live.com">
+					<fieldset>
+						<legend>Formulario</legend>
+						<table>
+							<tr>
+								<td>¿Cómo debemos tratar con usted?</td>
+								<td><input type="text" name="tratamientoPer" list="tratamiento" autofocus>
+									<datalist id="tratamiento">
+										<option label="Sr" value="Señor"></option>
+										<option label="Sra" value="Señora"></option>
+										<option label="Srta" value="Señorita"></option>
+									</datalist>
+								</td>
+							</tr>
+							<tr>
+								<td>Nombre: <p class="requerido">(*)</p><p id="tooltip">Nombre requerido</p></td>
+								<td><input type="text" name="Nombre" placeholder="Indique su nombre" required></td>
+							</tr>
+							<tr>
+								<td>Apellidos: <p class="requerido">(*)</p><p id="tooltip">Apellidos requerido</p></td>
+								<td><input type="text" name="Apellidos" placeholder="Indique sus apellidos" required></td>
+							</tr>
+							<tr>
+								<td>Fecha de nacimiento: <p class="requerido">(*)</p><p id="tooltip">Fecha requerida</p></td>
+								<td><input type="date" name="Fecha-Nacimiento" required></td>
+							</tr>
+							<tr>
+								<td>Email: <p class="requerido">(*)</p><p id="tooltip">Email requerido</p></td>
+								<td><input type="email" name="Email" placeholder="Indique su email" required></td>
+							</tr>
+							<tr>
+								<td>Satisfacción con la página web:</td>
+								<td><input type="range" name="satisfaccionWeb" min="0" max="10" value="0" required>
+								<output for="satisfaccionWeb" name="range_control_value">10</output></td>
+							</tr>
+							<tr>
+								<td>Sugerencias:</td>
+								<td><textarea rows="10" cols="25" placeholder="Sugerencias aquí"></textarea></td>
+							</tr>
+						</table>
+						<input type="submit" name="Enviar" class="botones">
+						<input type="reset" name="Borrar" value="Resetear campos" class="botones">
+					</fieldset>
+				</form>
 			</div>
 			<!-- Div del aside -->
 			<div id="aside">

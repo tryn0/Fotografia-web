@@ -1,7 +1,8 @@
 En la web hay unos pequeñísimos secretos, descúbralos.
 
 El menú lo hice inicialmente para que estuviese separado de la cabecera, para que se vea mejor 
-borre los 2 últimos atributos de posición (top y left), lo recomiendo si le gusta más.
+borre los 2 últimos atributos de posición (top y left) en el apartado nav, 
+concretamente línea 132 del archivo ./styles/style.css, lo recomiendo si le gusta más.
 
 No sé cómo se verá en otros ordenadores pero al verlo en el mi de la clase se veía un poco mal,
 le adjunto capturas de cómo se ven en mi pc con una resolución ajustada parecida al pc de la clase.
